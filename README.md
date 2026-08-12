@@ -44,7 +44,7 @@ It showcases my projects, development journey, and contact information with smoo
 ## 🚀 Getting Started
 
 ```bash
-git clone YOUR_REPOSITORY_URL
-cd YOUR_PROJECT_NAME
+git clone https://github.com/chanchal430/Portfolio.git
+cd Portfolio
 npm install
 npm run dev
