@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import heroBg from "../assets/hero.jpg";
 import gsap from "gsap";
+import cv from "../assets/resume/cv.pdf";
 
 const Hero = () => {
   /** giving gsap a ref to hero component */
@@ -83,8 +84,7 @@ const Hero = () => {
 
         const x = Math.round((clientX / window.innerWidth - 0.5) * 100);
         const y = Math.round((clientY / window.innerHeight - 0.5) * 100);
-        
-        
+
         moveBackgroundX(-x);
         moveBackgroundY(-y);
 
@@ -138,6 +138,17 @@ const Hero = () => {
         <p className="hero-description mt-4 text-sm uppercase tracking-[0.3em] text-gray-300 sm:text-base">
           Frontend Developer · React · JavaScript · GSAP
         </p>
+
+        <div className="mt-8">
+          <a
+            href={cv}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full group-hover:bg-purple-500 px-6 py-3 text-sm font-medium text-white transition hover:bg-purple-400"
+          >
+            View Resume ↗
+          </a>
+        </div>
       </div>
 
       {/* Bottom Moto */}
@@ -155,7 +166,6 @@ const Hero = () => {
 
         <div className="h-10 w-px bg-gray-600" />
       </div>
-
     </section>
   );
 };
