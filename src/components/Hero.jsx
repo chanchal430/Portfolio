@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useRef } from "react";
 import heroBg from "../assets/hero.jpg";
 import gsap from "gsap";
 import cv from "../assets/resume/cv.pdf";
+import { ArrowUpRight } from "lucide-react";
 
 const Hero = () => {
   /** giving gsap a ref to hero component */
@@ -144,9 +145,13 @@ const Hero = () => {
             href={cv}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full group-hover:bg-purple-500 px-6 py-3 text-sm font-medium text-white transition hover:bg-purple-400"
+            className="group inline-flex items-center gap-2 rounded-full bg-purple-500/5 px-6 py-3 text-sm font-medium text-white transition hover:bg-purple-400"
           >
-            View Resume ↗
+            View Resume
+            <ArrowUpRight
+              size={16}
+              className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            />
           </a>
         </div>
       </div>
